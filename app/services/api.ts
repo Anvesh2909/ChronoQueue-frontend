@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://your-ec2-ip:8080';
+const API_BASE_URL = 'http://16.112.57.1:8080';
 
 const api = axios.create({
   baseURL: API_BASE_URL,
