@@ -44,7 +44,7 @@ export default function Home() {
         idempotencyKey:
             formData.idempotencyKey && formData.idempotencyKey.trim() !== ''
                 ? formData.idempotencyKey
-                : crypto.randomUUID(),
+                : Math.random().toString(36).substring(2) + Date.now(),
 
         // FIX: proper ISO format for Spring (CRITICAL)
         scheduledAt:
