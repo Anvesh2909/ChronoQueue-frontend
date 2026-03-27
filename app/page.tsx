@@ -50,7 +50,7 @@ export default function Home() {
         scheduledAt:
             formData.scheduledAt && formData.scheduledAt !== ''
                 ? new Date(formData.scheduledAt).toISOString()
-                : null,
+                : undefined,
       };
 
       const result = await jobService.createJob(jobData);
