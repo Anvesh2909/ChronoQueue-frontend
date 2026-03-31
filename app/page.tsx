@@ -180,7 +180,7 @@ export default function Home() {
                     </label>
                     <select
                       value={formData.queueType}
-                      onChange={(e) => setFormData({...formData, queueType: e.target.value as any})}
+                      onChange={(e) => setFormData({...formData, queueType: e.target.value as never})}
                       className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                       required
                     >
@@ -245,18 +245,6 @@ export default function Home() {
                     />
                   </div>
 
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Idempotency Key (Optional)
-                    </label>
-                    <input
-                      type="text"
-                      value={formData.idempotencyKey}
-                      onChange={(e) => setFormData({...formData, idempotencyKey: e.target.value})}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                      placeholder="e.g., unique-key-123"
-                    />
-                  </div>
                 </div>
 
                 <div>
